@@ -22,5 +22,10 @@ public class CustomExceptionHandler {
 	public ResponseEntity<?> clientNotFoundException(){
 		return new ResponseEntity<>("Client not found", HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(EmployeeNotFoundException.class)
+	public ResponseEntity<?> employeeNotFoundException(){
+		return new ResponseEntity<>("Employee not found", HttpStatus.NOT_FOUND);
+	}
 
 }
