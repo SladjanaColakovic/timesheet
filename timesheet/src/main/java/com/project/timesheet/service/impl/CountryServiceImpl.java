@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.timesheet.exception.CategoryNotFoundException;
 import com.project.timesheet.exception.CountryNotFoundException;
 import com.project.timesheet.model.Country;
 import com.project.timesheet.repository.CountryRepository;

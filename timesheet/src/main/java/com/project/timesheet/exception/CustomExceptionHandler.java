@@ -17,5 +17,10 @@ public class CustomExceptionHandler {
 	public ResponseEntity<?> countryNotFoundException(){
 		return new ResponseEntity<>("Country not found", HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(ClientNotFoundException.class)
+	public ResponseEntity<?> clientNotFoundException(){
+		return new ResponseEntity<>("Client not found", HttpStatus.NOT_FOUND);
+	}
 
 }
