@@ -34,9 +34,7 @@ public class EmployeeController {
 	
 	@PostMapping
 	public ResponseEntity<?> create(@RequestBody NewEmployeeDto newEmployee){
-		System.out.println("New: " + newEmployee.isActive());
 		Employee mappedEmployee = mapper.map(newEmployee, Employee.class);
-		System.out.println("Mapped: " + newEmployee.isActive());
 		Employee result = service.create(mappedEmployee);
 		return new ResponseEntity<>(mapper.map(result, EmployeeDto.class), HttpStatus.CREATED);
 	}
