@@ -1,9 +1,9 @@
 package com.project.timesheet.service;
 
-import java.util.List;
 
-import com.project.timesheet.model.TimesheetItem;
+import com.project.timesheet.helper.Report;
+import com.project.timesheet.helper.ReportSearch;
 
 public interface ReportService {
-	List<TimesheetItem> getReport();
+	Report getReport(ReportSearch reportSearch);
 }
