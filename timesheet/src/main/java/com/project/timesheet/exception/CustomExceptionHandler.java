@@ -32,5 +32,10 @@ public class CustomExceptionHandler {
 	public ResponseEntity<?> projectNotFoundException(){
 		return new ResponseEntity<>("Project not found", HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(TimesheetItemNotFoundException.class)
+	public ResponseEntity<?> timesheetItemNotFoundException(){
+		return new ResponseEntity<>("Timesheet item not found", HttpStatus.NOT_FOUND);
+	}
 
 }
